@@ -31,7 +31,7 @@ void BFS() {
             q.pop();
             
             
-            if (map[orx][ory] == 'O' && map[obx][oby] != 'O') { // 빨간공만 들어갔을 경우 성공 나머지는 다 실패한 경우.
+            if (map[orx][ory] == 'O' && map[obx][oby] != 'O') { // 빨간공만 들어갔을 경우 성공 나머지는 다 실패한 경우
                 ans = cnt;
                 return;
             }
