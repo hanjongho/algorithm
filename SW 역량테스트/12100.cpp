@@ -4,7 +4,7 @@ using namespace std;
 int N, map[21][21], map_copy[21][21];
 int max_ = -1;
 
-// 1 2 3 4 -> 시계방향
+// 1 2 3 4 -> 시계방향.
 
 void move(int dir) {
     int t;
