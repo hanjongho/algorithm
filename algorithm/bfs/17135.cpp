@@ -10,6 +10,7 @@ int check_x[16], check_y[16], map[16][16], map_c[16][16];
 int dir_x[3] = {0,-1,0};
 int dir_y[3] = {-1,0,1};
 int N, M, D, cnt = 0, total = 0;
+
 void move(){
     for(int i=N-1; i>=1; i--)
         for(int j=1; j<=M; j++)
@@ -18,6 +19,7 @@ void move(){
     for(int i=1; i<=M; i++)
         map[1][i] = 0;
 }
+
 void search(){
     while(!find_q.empty()){
         int qd = find_q.front().first;

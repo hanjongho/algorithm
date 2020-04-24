@@ -7,33 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FAA728F32452B9C40003206B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA728F22452B9C40003206B /* main.cpp */; };
-		FAA7291E2452B9DB0003206B /* 17135.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA728FA2452B9DA0003206B /* 17135.cpp */; };
-		FAA7291F2452B9DB0003206B /* 13460.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA728FB2452B9DA0003206B /* 13460.cpp */; };
-		FAA729202452B9DB0003206B /* 2056.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA728FD2452B9DA0003206B /* 2056.cpp */; };
-		FAA729212452B9DB0003206B /* 1766.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA728FE2452B9DA0003206B /* 1766.cpp */; };
-		FAA729222452B9DB0003206B /* 2252.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA728FF2452B9DA0003206B /* 2252.cpp */; };
-		FAA729232452B9DB0003206B /* 1516.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA729002452B9DA0003206B /* 1516.cpp */; };
-		FAA729242452B9DB0003206B /* 2623.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA729012452B9DA0003206B /* 2623.cpp */; };
-		FAA729252452B9DB0003206B /* 2042.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA729032452B9DA0003206B /* 2042.cpp */; };
-		FAA729262452B9DB0003206B /* 10868.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA729042452B9DA0003206B /* 10868.cpp */; };
-		FAA729272452B9DB0003206B /* 2357.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA729052452B9DA0003206B /* 2357.cpp */; };
-		FAA729282452B9DB0003206B /* 9576.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA729072452B9DA0003206B /* 9576.cpp */; };
-		FAA729292452B9DB0003206B /* 1238.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA729092452B9DA0003206B /* 1238.cpp */; };
-		FAA7292A2452B9DB0003206B /* 1916.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA7290A2452B9DA0003206B /* 1916.cpp */; };
-		FAA7292B2452B9DB0003206B /* 1753.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA7290B2452B9DA0003206B /* 1753.cpp */; };
-		FAA7292D2452B9DB0003206B /* 16637.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA7290E2452B9DA0003206B /* 16637.cpp */; };
-		FAA7292E2452B9DB0003206B /* 11404.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA729102452B9DA0003206B /* 11404.cpp */; };
-		FAA7292F2452B9DB0003206B /* 2458.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA729112452B9DA0003206B /* 2458.cpp */; };
-		FAA729302452B9DB0003206B /* 11722.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA729132452B9DA0003206B /* 11722.cpp */; };
-		FAA729312452B9DB0003206B /* 9251.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA729142452B9DA0003206B /* 9251.cpp */; };
-		FAA729322452B9DB0003206B /* 3190.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA729162452B9DA0003206B /* 3190.cpp */; };
-		FAA729332452B9DB0003206B /* 17281.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA729182452B9DA0003206B /* 17281.cpp */; };
-		FAA729342452B9DB0003206B /* 17142.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA729192452B9DA0003206B /* 17142.cpp */; };
-		FAA729352452B9DB0003206B /* 12100.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA7291B2452B9DB0003206B /* 12100.cpp */; };
-		FAA729362452B9DB0003206B /* 1113.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA7291C2452B9DB0003206B /* 1113.cpp */; };
-		FAA729372452B9DB0003206B /* 5373.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA7291D2452B9DB0003206B /* 5373.cpp */; };
-		FAA729392452BAE00003206B /* 17070.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA729382452BAE00003206B /* 17070.cpp */; };
+		FAA7293E2452BC9D0003206B /* 17135.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA728FA2452B9DA0003206B /* 17135.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -296,33 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAA729372452B9DB0003206B /* 5373.cpp in Sources */,
-				FAA729282452B9DB0003206B /* 9576.cpp in Sources */,
-				FAA729252452B9DB0003206B /* 2042.cpp in Sources */,
-				FAA729222452B9DB0003206B /* 2252.cpp in Sources */,
-				FAA729272452B9DB0003206B /* 2357.cpp in Sources */,
-				FAA7292E2452B9DB0003206B /* 11404.cpp in Sources */,
-				FAA7291F2452B9DB0003206B /* 13460.cpp in Sources */,
-				FAA729262452B9DB0003206B /* 10868.cpp in Sources */,
-				FAA728F32452B9C40003206B /* main.cpp in Sources */,
-				FAA729202452B9DB0003206B /* 2056.cpp in Sources */,
-				FAA729342452B9DB0003206B /* 17142.cpp in Sources */,
-				FAA729232452B9DB0003206B /* 1516.cpp in Sources */,
-				FAA729362452B9DB0003206B /* 1113.cpp in Sources */,
-				FAA7292B2452B9DB0003206B /* 1753.cpp in Sources */,
-				FAA7292F2452B9DB0003206B /* 2458.cpp in Sources */,
-				FAA729392452BAE00003206B /* 17070.cpp in Sources */,
-				FAA729312452B9DB0003206B /* 9251.cpp in Sources */,
-				FAA7291E2452B9DB0003206B /* 17135.cpp in Sources */,
-				FAA729322452B9DB0003206B /* 3190.cpp in Sources */,
-				FAA729242452B9DB0003206B /* 2623.cpp in Sources */,
-				FAA729302452B9DB0003206B /* 11722.cpp in Sources */,
-				FAA729352452B9DB0003206B /* 12100.cpp in Sources */,
-				FAA7292D2452B9DB0003206B /* 16637.cpp in Sources */,
-				FAA729212452B9DB0003206B /* 1766.cpp in Sources */,
-				FAA7292A2452B9DB0003206B /* 1916.cpp in Sources */,
-				FAA729332452B9DB0003206B /* 17281.cpp in Sources */,
-				FAA729292452B9DB0003206B /* 1238.cpp in Sources */,
+				FAA7293E2452BC9D0003206B /* 17135.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
