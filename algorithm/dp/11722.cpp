@@ -20,14 +20,15 @@ int main(){
             if(arr[j] < arr[i])
                 temp = max(temp, cnt[j]);
         cnt[i] += temp;
-        
+        temp = 0;
     }
     
     temp = -1;
-    for(int i=1; i<=number; i++)
+    for(int i=number; i>=1; i--){
+        cout << cnt[i] << " ";
         temp = max(temp, cnt[i]);
-    
-    cout << temp;
+    }
+    // cout << temp;
     
     return 0;
 }

@@ -21,6 +21,11 @@ bool func(books &p1, books &p2){
 }
 
 int main(){
+    vector<books> v;
+    v.push_back({1,5});
+    v.push_back({3,5});
+    
+    
     cin >> test_case;
     while(test_case--){
         
@@ -49,5 +54,7 @@ int main(){
         v.clear();
         cout << cnt << endl;
     }
+    
+    
     return 0;
 }

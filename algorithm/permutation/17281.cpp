@@ -24,7 +24,7 @@ void permutations(int *arr, int k, int m){ // k = 시작점
                     if(base[3]){
                         base[3] = 0;
                         score++;
-                    }d
+                    }
                     if(base[2]){
                         base[2] = 0;
                         base[3] = 1;

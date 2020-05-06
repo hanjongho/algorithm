@@ -2,7 +2,7 @@
 #define MAX 20
 using namespace std;
  
-int N, answer = -987564321;
+int N, answer = -987654321987654321;
 int num[MAX];
 char oper[MAX];
 int calc(int a, char oper, int b){
@@ -15,7 +15,7 @@ int calc(int a, char oper, int b){
 }
  
 void dfs(int idx, int result){
-    if (idx >= N/2){
+    if (idx >= N/2){ // 수와 연산자를 분리했기때문에 절반에 도달하면 다 검사완료.
         if(result > answer)
             answer = result;
         return;

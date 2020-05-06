@@ -35,15 +35,13 @@ void dfs(int x, int y, int dir){ // 1 가로 2 대각선 3 세로
 
 
 int main(){
-    scanf("%d", &N);
+    cin >> N;
     for(int i=1; i<=N; i++)
         for(int j=1; j<=N; j++)
-            scanf("%d",&map[i][j]);
+            cin >> map[i][j];
     
-    
-    dfs(1,2,1);
-    printf("%d",cnt);
-    
+    dfs(1,2,1); // 현 좌표 x, y , 방향 dir
+    cout << cnt;
     
     return 0;
 }

@@ -8,10 +8,11 @@ priority_queue<int> pq;
 
 void topologySort(){
     for (int i = 1; i <= N; i++) {
-        if (inDegree[i] == 0)
+        if (inDegree[i] == 0){
             pq.push(-i);
+        }
     }
-    while (pq.size()) {
+    while(pq.size()) {
         int x = -pq.top();
         pq.pop();
         cout << x << " ";

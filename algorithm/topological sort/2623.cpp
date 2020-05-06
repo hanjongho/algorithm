@@ -38,6 +38,7 @@ int main(){
     }
     
     topologySort();
+    
     if(ans.size() != N)
         cout << "0";
     else
