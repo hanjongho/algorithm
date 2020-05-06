@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FAA7293E2452BC9D0003206B /* 17135.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA728FA2452B9DA0003206B /* 17135.cpp */; };
+		FA4E9CFE246150E70098D236 /* 2170.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA4E9CFD246150E70098D236 /* 2170.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,6 +23,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FA4E9CF8246150810098D236 /* 1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 1.cpp; sourceTree = "<group>"; };
+		FA4E9CFA2461508D0098D236 /* 2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 2.cpp; sourceTree = "<group>"; };
+		FA4E9CFD246150E70098D236 /* 2170.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 2170.cpp; sourceTree = "<group>"; };
 		FAA728EF2452B9C40003206B /* algo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = algo; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA728F22452B9C40003206B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		FAA728FA2452B9DA0003206B /* 17135.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 17135.cpp; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		FAA7291C2452B9DB0003206B /* 1113.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 1113.cpp; sourceTree = "<group>"; };
 		FAA7291D2452B9DB0003206B /* 5373.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 5373.cpp; sourceTree = "<group>"; };
 		FAA729382452BAE00003206B /* 17070.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 17070.cpp; sourceTree = "<group>"; };
+		FAA72943245551150003206B /* algo2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = algo2.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +68,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA4E9CF7246150690098D236 /* SOMA 11th Coding Test */ = {
+			isa = PBXGroup;
+			children = (
+				FA4E9CF8246150810098D236 /* 1.cpp */,
+				FA4E9CFA2461508D0098D236 /* 2.cpp */,
+			);
+			path = "SOMA 11th Coding Test";
+			sourceTree = "<group>";
+		};
+		FA4E9CFC246150D90098D236 /*  swiping */ = {
+			isa = PBXGroup;
+			children = (
+				FA4E9CFD246150E70098D236 /* 2170.cpp */,
+			);
+			path = " swiping";
+			sourceTree = "<group>";
+		};
 		FAA728E62452B9C40003206B = {
 			isa = PBXGroup;
 			children = (
+				FA4E9CFC246150D90098D236 /*  swiping */,
+				FA4E9CF7246150690098D236 /* SOMA 11th Coding Test */,
 				FAA728F12452B9C40003206B /* algo */,
 				FAA728F02452B9C40003206B /* Products */,
 				FAA728F92452B9DA0003206B /* bfs */,
@@ -95,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				FAA728F22452B9C40003206B /* main.cpp */,
+				FAA72943245551150003206B /* algo2.cpp */,
 			);
 			path = algo;
 			sourceTree = "<group>";
@@ -270,7 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAA7293E2452BC9D0003206B /* 17135.cpp in Sources */,
+				FA4E9CFE246150E70098D236 /* 2170.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

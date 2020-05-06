@@ -20,7 +20,7 @@ int main(){
             if(arr[j] < arr[i])
                 temp = max(temp, cnt[j]);
         cnt[i] += temp;
-        temp = 0;
+        
     }
     
     temp = -1;
