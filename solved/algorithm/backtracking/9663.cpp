@@ -11,7 +11,6 @@ void dfs(int x){
         return;
     }
     
-    
     for(int i=1; i<=N; i++){ // i가 y값
         
         map[x][i] = 1;

@@ -1,9 +1,31 @@
-//
-//  11055.cpp
-//  solved
-//
-//  Created by 한종호 on 2020/05/07.
-//  Copyright © 2020 hanjongho. All rights reserved.
-//
+#include <iostream>
+using namespace std;
 
-#include <stdio.h>
+int N, tmp;
+int arr[1001], dp[1001];
+
+int main()
+{
+    cin >> N;
+    for (int i = 1; i <= N; i++)
+        cin >> arr[i];
+    
+    dp[N] = arr[N];
+
+    for (int i = N - 1; i > 0; i--) {
+        tmp = 0;
+        for (int j = i; j <= N; j++) {
+            if (dp[j] > tmp && arr[i] < arr[j])
+                tmp = dp[j];
+        }
+        dp[i] = tmp + arr[i];
+    }
+
+    for (int i = 1; i <= N; i++)
+        if (dp[i] > tmp)
+            tmp = dp[i];
+    printf("%d ", tmp);
+
+
+    return 0;
+}
