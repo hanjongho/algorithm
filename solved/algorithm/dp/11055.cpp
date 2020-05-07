@@ -4,8 +4,7 @@ using namespace std;
 int N, tmp;
 int arr[1001], dp[1001];
 
-int main()
-{
+int main(){
     cin >> N;
     for (int i = 1; i <= N; i++)
         cin >> arr[i];
@@ -22,10 +21,9 @@ int main()
     }
 
     for (int i = 1; i <= N; i++)
-        if (dp[i] > tmp)
-            tmp = dp[i];
-    printf("%d ", tmp);
-
+        temp = max(dp[i], temp);
+    
+    cout << temp;
 
     return 0;
 }
