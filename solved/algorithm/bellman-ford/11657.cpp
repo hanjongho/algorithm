@@ -1,12 +1,12 @@
 #include <iostream>
 #include <vector>
-#define INF 10001
+#define INF 9876543
 using namespace std;
 
 int N, M, A, B, C;
 vector<pair<int, int>> v[501];
 bool cycle = false;
-int dist[501] = {INF,};
+long long dist[501] = {INF,};
 
 void bellman_ford(){
     for(int i = 1; i <= N; i++) { // 시작점
@@ -14,8 +14,9 @@ void bellman_ford(){
              for(int k = 0; k < v[j].size(); k++) { // 기준점 정보 다 털기
                  int dest = v[j][k].first;
                  int cost = v[j][k].second;
-                 if (dist[j] != INF && j != dest && dist[dest] > cost + dist[j]) {
-                     dist[dest] = min(dist[dest], cost + dist[j]); //최소값으로 갱신
+                 
+                 if (dist[j] != INF && dist[dest] > cost + dist[j]) {
+                     dist[dest] = cost + dist[j];
                      if (i == N)
                          cycle = true;
                  }
