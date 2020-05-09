@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA4E9D4E24661A8A0098D236 /* 1865.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA4E9D4A2465E71D0098D236 /* 1865.cpp */; };
+		FA4E9D53246627BB0098D236 /* 1922.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA4E9D52246627BB0098D236 /* 1922.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -81,6 +81,7 @@
 		FA4E9D45246330470098D236 /* 11055.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 11055.cpp; sourceTree = "<group>"; };
 		FA4E9D47246330D40098D236 /* 11053.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 11053.cpp; sourceTree = "<group>"; };
 		FA4E9D4A2465E71D0098D236 /* 1865.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 1865.cpp; sourceTree = "<group>"; };
+		FA4E9D52246627BB0098D236 /* 1922.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 1922.cpp; sourceTree = "<group>"; };
 		FAA146AA24632B45005A255D /* solved */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = solved; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA146AD24632B45005A255D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +117,7 @@
 		FA4E9CFF24632C070098D236 /* algorithm */ = {
 			isa = PBXGroup;
 			children = (
+				FA4E9D4F2466211D0098D236 /* minimum spanning tree */,
 				FA198BCC2464324C00C1F370 /* bellman-ford */,
 				FA198BC724640F3200C1F370 /* bruteforce */,
 				FA4E9D0024632C070098D236 /* permutation */,
@@ -310,6 +312,14 @@
 			path = problem;
 			sourceTree = "<group>";
 		};
+		FA4E9D4F2466211D0098D236 /* minimum spanning tree */ = {
+			isa = PBXGroup;
+			children = (
+				FA4E9D52246627BB0098D236 /* 1922.cpp */,
+			);
+			path = "minimum spanning tree";
+			sourceTree = "<group>";
+		};
 		FAA146A124632B45005A255D = {
 			isa = PBXGroup;
 			children = (
@@ -395,7 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA4E9D4E24661A8A0098D236 /* 1865.cpp in Sources */,
+				FA4E9D53246627BB0098D236 /* 1922.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
