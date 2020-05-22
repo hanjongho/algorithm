@@ -1,15 +1,19 @@
-//
-//  main.cpp
-//  solved
-//
-//  Created by 한종호 on 20/05/2020.
-//  Copyright © 2020 hanjongho. All rights reserved.
-//
-
 #include <iostream>
+#include <vector>
+using namespace std;
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+void fuc(vector<int> array){
+    int t = array.size();
+    while(t--){
+        array[t] = 5;
+    }
+}
+
+int main(){
+    vector<int> arr = {1,2,3,4};
+    arr.push_back(5);
+    fuc(arr);
+    for(int i=0; i<5; i++)
+        cout << arr[i];
     return 0;
 }

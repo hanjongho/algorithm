@@ -4,9 +4,9 @@ using namespace std;
 #define INF 1000000001
 
 int N, M;
-int arr[100001], minTree[400004], maxTree[400004];
+int arr[100001], minTree[400004];
 
-int makeMinTree(int node, int start, int end) {
+int makeMinTree(int node, int start, int end){
     if(start == end)
         return minTree[node] = arr[start];
     
@@ -14,7 +14,6 @@ int makeMinTree(int node, int start, int end) {
     
     return minTree[node] = min(makeMinTree(node * 2, start, mid), makeMinTree(node * 2 + 1, mid + 1, end));
 }
-
 
 int returnMin(int node, int left, int right, int start, int end) {
     if(right < start || end < left)
@@ -29,7 +28,9 @@ int returnMin(int node, int left, int right, int start, int end) {
 }
 
 int main() {
-    ios::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
     
     cin >> N >> M;
 
@@ -43,6 +44,7 @@ int main() {
         cin >> a >> b;
         cout << returnMin(1, 1, N, a, b) << "\n";
     }
+    
     return 0;
 }
 

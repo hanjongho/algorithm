@@ -17,6 +17,7 @@ pair<pair<int,int>, int> v[100001];
 bool cmp(pair<pair<int,int>, int> v1, pair<pair<int,int>, int> v2){
     return v1.second < v2.second;
 }
+
 int getParent(int x){
     if(parent[x] == x)
         return x;
@@ -55,7 +56,7 @@ int main(){
             a = getParent(v[i].first.first);
             b = getParent(v[i].first.second);
             
-            if( a < b)
+            if( a < b )
                 parent[b] = a;
             else
                 parent[a] = b;
