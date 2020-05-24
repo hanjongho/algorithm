@@ -11,7 +11,7 @@ struct edge{
 };
 
 vector<edge> ed;
-planet pl[1000000];
+planet pl[100001];
 int parent[100001];
 int N, cnt = 0, ans = 0;
 
@@ -43,6 +43,7 @@ int main(){
     cin.tie(0);
     
     cin >> N;
+    
     for(int i=0 ; i<N; i++){
         cin >> pl[i].x >> pl[i].y >> pl[i].z;
         pl[i].num = i;
@@ -63,7 +64,7 @@ int main(){
     
     sort(ed.begin(), ed.end(), cmp);
     
-    for(int i = 0; i<ed.size(); i++){
+    for(int i = 0; i < ed.size(); i++){
         if(getParent(ed[i].from) != getParent(ed[i].to)){
             cnt++;
             ans += ed[i].weight;
