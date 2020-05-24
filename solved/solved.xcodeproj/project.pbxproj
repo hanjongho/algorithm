@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA79D12B24782C6B008E1221 /* 6549(seg).cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA79D1262477A90C008E1221 /* 6549(seg).cpp */; };
+		FA79D139247A96D9008E1221 /* 2820.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA79D135247A6966008E1221 /* 2820.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -89,6 +89,9 @@
 		FA5C1C31247541C500435972 /* 17070.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 17070.cpp; sourceTree = "<group>"; };
 		FA79D12424779B09008E1221 /* 6549.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 6549.cpp; sourceTree = "<group>"; };
 		FA79D1262477A90C008E1221 /* 6549(seg).cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "6549(seg).cpp"; sourceTree = "<group>"; };
+		FA79D12C2479A348008E1221 /* 12865.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 12865.cpp; sourceTree = "<group>"; };
+		FA79D12E247A2505008E1221 /* 14501.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 14501.cpp; sourceTree = "<group>"; };
+		FA79D135247A6966008E1221 /* 2820.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 2820.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,23 +159,24 @@
 		FA5C1BEA247541C500435972 /* algorithm */ = {
 			isa = PBXGroup;
 			children = (
-				FA5C1BEB247541C500435972 /* permutation */,
-				FA5C1BEE247541C500435972 /* topological sort */,
-				FA5C1BF4247541C500435972 /* bellman-ford */,
-				FA5C1BF7247541C500435972 /* dfs */,
-				FA5C1BFA247541C500435972 /* floyd-warshall */,
-				FA5C1BFF247541C500435972 /* segmenttree */,
-				FA5C1C03247541C500435972 /* linkedlist */,
-				FA5C1C05247541C500435972 /* bruteforce */,
-				FA5C1C07247541C500435972 /* backtracking */,
 				FA5C1C0D247541C500435972 /* algo */,
+				FA5C1C07247541C500435972 /* backtracking */,
+				FA5C1BF4247541C500435972 /* bellman-ford */,
+				FA5C1C14247541C500435972 /* bfs */,
+				FA79D131247A5AF3008E1221 /* bitmask */,
+				FA5C1C05247541C500435972 /* bruteforce */,
+				FA5C1BF7247541C500435972 /* dfs */,
+				FA5C1C21247541C500435972 /* dijkstra */,
+				FA5C1C1B247541C500435972 /* dp */,
+				FA5C1BFA247541C500435972 /* floyd-warshall */,
+				FA5C1C18247541C500435972 /* greedy */,
+				FA5C1C03247541C500435972 /* linkedlist */,
+				FA5C1C25247541C500435972 /* minimum spanning tree */,
+				FA5C1BEB247541C500435972 /* permutation */,
+				FA5C1BFF247541C500435972 /* segmenttree */,
 				FA5C1C0E247541C500435972 /* simulation */,
 				FA5C1C12247541C500435972 /* swiping */,
-				FA5C1C14247541C500435972 /* bfs */,
-				FA5C1C18247541C500435972 /* greedy */,
-				FA5C1C1B247541C500435972 /* dp */,
-				FA5C1C21247541C500435972 /* dijkstra */,
-				FA5C1C25247541C500435972 /* minimum spanning tree */,
+				FA5C1BEE247541C500435972 /* topological sort */,
 			);
 			path = algorithm;
 			sourceTree = "<group>";
@@ -230,6 +234,7 @@
 		FA5C1BFF247541C500435972 /* segmenttree */ = {
 			isa = PBXGroup;
 			children = (
+				FA79D135247A6966008E1221 /* 2820.cpp */,
 				FA5C1C00247541C500435972 /* 2042.cpp */,
 				FA5C1C01247541C500435972 /* 10868.cpp */,
 				FA5C1C02247541C500435972 /* 2357.cpp */,
@@ -251,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				FA5C1C06247541C500435972 /* 7453.cpp */,
+				FA79D12E247A2505008E1221 /* 14501.cpp */,
 			);
 			path = bruteforce;
 			sourceTree = "<group>";
@@ -314,6 +320,7 @@
 		FA5C1C1B247541C500435972 /* dp */ = {
 			isa = PBXGroup;
 			children = (
+				FA79D12C2479A348008E1221 /* 12865.cpp */,
 				FA5C1C1C247541C500435972 /* 11054.cpp */,
 				FA5C1C1D247541C500435972 /* 11055.cpp */,
 				FA5C1C1E247541C500435972 /* 11722.cpp */,
@@ -356,6 +363,13 @@
 				FA5C1C31247541C500435972 /* 17070.cpp */,
 			);
 			path = sw_atest;
+			sourceTree = "<group>";
+		};
+		FA79D131247A5AF3008E1221 /* bitmask */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = bitmask;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,7 +429,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA79D12B24782C6B008E1221 /* 6549(seg).cpp in Sources */,
+				FA79D139247A96D9008E1221 /* 2820.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,17 +9,21 @@
 #include <iostream>
 using namespace std;
 
-int N;
-int cost[17][17];
+int C;
+int playAbility[12][12];
 
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
     
-    cin >> N;
-    for(int i=1; i<=N; i++)
-        for(int j=1; j<=N; j++)
-            cin >> cost[i][j];
+    cin >> C;
+    while(C--){
+        for(int i=1; i<=11; i++)
+            for(int j=1; j<=11; j++)
+                cin >> playAbility[i][j];
+        
+        
+    }
     
     return 0;
 }
