@@ -4,10 +4,10 @@
 using namespace std;
 
 int n, m, l[MAX], r[MAX];
-long long tree[MAX * 4], lazy[MAX * 4], salary[MAX], order[MAX];
+long long tree[MAX * 4], lazy[MAX * 4], salary[MAX], salary_[MAX];
 vector<vector<int>> p;
 
-void dfs(int now, int &cnt){
+void dfs(int now, int &cnt){ // L[i]는 내 번호, R[i]는 내 트리 기준 맨 마지막 인덱스
     l[now] = ++cnt;
     for (int next : p[now])
         dfs(next, cnt);
@@ -16,7 +16,7 @@ void dfs(int now, int &cnt){
 
 void init(int node, int s, int e){
     if(s == e){
-        tree[node] = order[s];
+        tree[node] = salary_[s];
         return;
     }
     int m = (s + e) / 2;
@@ -26,7 +26,7 @@ void init(int node, int s, int e){
 
 void update_lazy(int node, int s, int e){
     if(lazy[node]){
-        tree[node] += lazy[node];
+        tree[node] += lazy[node] * (e-s+1);
         if (s != e){ // 리프노드가 아니면
             lazy[node * 2] += lazy[node];
             lazy[node * 2 + 1] += lazy[node];
@@ -35,7 +35,7 @@ void update_lazy(int node, int s, int e){
     }
 }
 
-void update(int node, int s, int e, int i, int j, long long v){
+void update(int node, int s, int e, int i, int j, long long v){ // i~j 구간을 v로 바꿔라
     update_lazy(node, s, e);
     if (j < s || e < i) // s~e가 구간인데 벗어나면 return
         return;
@@ -71,7 +71,7 @@ int main(){
     p.resize(n + 1);
     int x, y;
     
-    for(int i=2; i<=n; i++){
+    for(int i=2; i<=n; i++){ // p[i]에는 아래 얘들이 들어있음
         cin >> salary[i] >> x;
         p[x].push_back(i);
     }
@@ -79,9 +79,9 @@ int main(){
     dfs(1, cnt);
     
     for (int i=1; i<=n; i++)
-        order[l[i]] = salary[i];
+        salary_[l[i]] = salary[i];
     init(1, 1, n);
-
+    
     for (int i=0; i<m; i++){
         char c;
         cin >> c;
@@ -94,8 +94,11 @@ int main(){
             cout << query(1, 1, n, l[x]) << "\n";
         }
     }
-    cout << "\n\n";
-    for(int i=1; i<=4*n; i++)
+    cout <<"\n";
+    for(int i=1; i<=3*n; i++)
         cout << tree[i] << " ";
-    
+    cout <<"\n";
+    for(int i=1; i<=3*n; i++)
+        cout << lazy[i] << " ";
+    cout <<"\n";
 }
