@@ -17,6 +17,10 @@ int TSP(int current, int visited){
         return result;
     result = INF;
     for (int next = 0; next < N; next++){
+<<<<<<< HEAD
+        // 이미 방문했거나, 갈 수 없는 경우
+=======
+>>>>>>> 0a9c8cb9e0e880157b73bd6e8fc5b76cb069ec36
         if (visited & (1 << next) || W[current][next] == 0)
             continue;
         result = min(result, W[current][next] + TSP(next, visited + (1 << next)));
