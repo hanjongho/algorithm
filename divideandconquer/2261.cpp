@@ -51,8 +51,7 @@ int closest_pair(vector<Point>::iterator it, int n) {
  
 int main(void) {
     ios::sync_with_stdio(false);
-    cin.tie(0);
-    cout.tie(0);
+    cin.tie(0); cout.tie(0);
  
     int n;
     cin >> n;
