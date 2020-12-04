@@ -3,7 +3,7 @@ using namespace std;
 
 void disk(int N, int first, int second, int third)
 {
-    if(N == 1)
+    if (N == 1)
 		cout << first << " " << third << "\n";
     else
     {
@@ -20,7 +20,7 @@ int main()
 
 	int N;
 	cin >> N;
-	cout << (1 << N) -1 << "\n";
+	cout << (1 << N) - 1 << "\n";
     disk(N, 1, 2, 3);
 	return (0);
 }

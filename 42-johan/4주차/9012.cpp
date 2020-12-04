@@ -4,8 +4,8 @@ using namespace std;
 
 int main()
 {
-	ios_base::sync_with_stdio(0);
-	cin.tie(0);
+	ios_base::sync_with_stdio(false);
+	cin.tie(0); cout.tie(0);
 
     char stack[51];
     int len = 0, number, a = 0;
