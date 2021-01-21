@@ -21,9 +21,9 @@ int main(){
     }
 
     for (int i = 1; i <= N; i++)
-        temp = max(dp[i], temp);
+        tmp = max(dp[i], tmp);
     
-    cout << temp;
+    cout << tmp;
 
     return 0;
 }
