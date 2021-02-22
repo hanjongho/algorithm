@@ -1,56 +1,59 @@
 #include <iostream>
-#include <cstdlib>
 using namespace std;
 
-int N, result = 0;
-int map[15][15];
+int N, ans = 0;
+int map[16][16];
 
-void dfs(int x){
-    if(x == N){
-        result++;
-        return;
+int positionCheck(int x, int y)
+{
+    int i;
+    int j;
+
+    i = x;
+    j = y;
+    while (i >= 0)
+        if (map[i--][y])
+            return (0);
+
+    i = x;
+    j = y;
+    while (i >= 0 && j >= 0)
+        if (map[i--][j--])
+            return (0);
+
+    i = x;
+    j = y;
+    while (i >= 0 && j < N)
+        if (map[i--][j++])
+            return (0);
+    return (1);
+}
+
+void dfs(int idx)
+{
+    if (idx == N)
+    {
+        ans++;
+        return ;
     }
-    
-    for(int i=1; i<=N; i++){ // i가 y값
-        
-        map[x][i] = 1;
-        
-        int flag = 1;
-        
-        for(int j=1; j<x; j++){ // in the same column
-            if(map[x][i] == map[j][i]){
-                flag = 0;
-                break;
-            }
+    for (int i = 0; i < N; i++)
+    {
+        if (positionCheck(idx, i))
+        {
+            map[idx][i] = 1;
+            dfs(idx + 1);
+            map[idx][i] = 0;
         }
-        
-        for(int k=1; k<x; k++){ // in the same cross
-            for(int j=1; j<=N; j++){
-                if(map[k][j] && abs(k-x) == abs(j-i)){
-                    flag = 0;
-                    break;
-                }
-            }
-        }
-        if(flag)
-            dfs(x+1);
-        else
-            map[x][i] = 0;
     }
 }
 
-int main(){
-    ios::sync_with_stdio(false);
-    cin.tie(0);
-    
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0); cout.tie(0);
+
     cin >> N;
-    
-    for(int i=1; i<=N; i++){
-        map[1][i] = 1;
-        dfs(2);
-        map[1][i] = 0;
-    }
-    cout << result;
-    
-    return 0;
+    dfs(0);
+    cout << ans;
+    return (0);
 }
