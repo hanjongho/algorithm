@@ -17,7 +17,7 @@ int main()
             i++;
         }
         else if (str[i] == '(')
-            cnt++;
+            cnt++;s
         else if (str[i] == ')')
         {
             ans++;
