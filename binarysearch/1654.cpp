@@ -20,11 +20,11 @@ int main()
     
     long long left = 1, right = max, mid;
     
-    while(right >= left)
+    while (right >= left)
     {
         total = 0;
         mid = (right + left) / 2;
-        for (int i=0; i<K; i++)
+        for (int i = 0; i < K; i++)
             if (a[i] >= mid)
                 total += (a[i]/mid);
         
