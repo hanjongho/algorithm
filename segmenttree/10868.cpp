@@ -1,50 +1,46 @@
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
-#define INF 1000000001
+long long arr[100001], minTree[400004];
 
-int N, M;
-int arr[100001], minTree[400004];
+long long minInit(int idx, int start, int end)
+{
+    if (start == end)
+        return minTree[idx] = arr[start];
 
-int makeMinTree(int node, int start, int end){
-    if(start == end)
-        return minTree[node] = arr[start];
-    
-    int mid = (start + end) / 2;
-    
-    return minTree[node] = min(makeMinTree(node * 2, start, mid), makeMinTree(node * 2 + 1, mid + 1, end));
+    return minTree[idx] = min(minInit(idx * 2, start, (start + end) / 2), minInit(idx * 2 + 1, (start + end) / 2 + 1, end));
 }
 
-int returnMin(int node, int left, int right, int start, int end) {
-    if(right < start || end < left)
-        return INF; //구간밖
+long long minSum(int idx, int start, int end, int left, int right)
+{
+    if (right < start || left > end)
+        return (2e9);
     
-    if(start <= left && right <= end)
-        return minTree[node];
+    if (left <= start && end <= right)
+        return minTree[idx];
 
-    int mid = (left + right) / 2;
-
-    return min(returnMin(node * 2, left, mid, start, end), returnMin(node * 2 + 1, mid + 1, right, start, end));
+    return min(minSum(idx * 2, start, (start + end) / 2, left, right), minSum(idx * 2 + 1, (start + end) / 2 + 1, end, left, right));
 }
 
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-    
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0); cout.tie(0);
+
+    int N, M;
     cin >> N >> M;
-
-    for (int i = 1; i <= N; i++)
+    for (int i = 0; i < N; i++)
         cin >> arr[i];
 
-    makeMinTree(1, 1, N);
+    minInit(1, 0, N - 1);
 
-    while(M--) {
+    for (int i = 0; i < M; i++)
+    {
         int a, b;
         cin >> a >> b;
-        cout << returnMin(1, 1, N, a, b) << "\n";
+        cout << minSum(1, 0, N - 1, a - 1, b - 1) << "\n";
     }
-    
-    return 0;
-}
 
+    return (0);
+}
