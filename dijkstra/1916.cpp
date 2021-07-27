@@ -1,52 +1,56 @@
 #include <iostream>
 #include <vector>
 #include <queue>
-#include <cstring>
 using namespace std;
- 
-int N, M, start, finish;
+
+vector<pair<int, int> > v[1001];
+priority_queue<pair<int, int>> pq;
 int dist[1001];
-vector <pair<int,int>> graph[1001];
-queue<int> q;
 
+int main()
+{
+	ios::sync_with_stdio(0);
+	cin.tie(0); cout.tie(0);
 
-int dijkstra(int start) {
-    q.push(start);
+	int N, M, start, end;
+	cin >> N >> M;
+
+	for (int i = 0; i < M; i++)
+    {
+		int a, b, c;
+		cin >> a >> b >> c;
+		v[a].push_back({b, c});
+	}
+	cin >> start >> end;
+
+	for (int i = 1; i <= N; i++) 
+		dist[i] = 987654321;
+
     dist[start] = 0;
- 
-    while (!q.empty()) {
-        int x = q.front();
-        q.pop();
- 
-        for (int i = 0; i < graph[x].size(); i++) {
-            int nx = graph[x][i].first;
-            int cost = graph[x][i].second;
-            if (dist[nx] == -1 || dist[x] + cost < dist[nx]) {
-                dist[nx] = dist[x] + cost;
-                if(nx != finish)
-                    q.push(nx);
-            }
-        }
-    }
-    return dist[finish];
-}
- 
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-    memset(dist, -1, sizeof(dist));
+	pq.push({dist[start], start});
+	while (!pq.empty()) 
+    {
+		int cost = pq.top().first * -1;
+		int now = pq.top().second;
+		pq.pop();
+
+		if (dist[now] < cost)
+            continue ;
+
+		for (int i = 0; i < v[now].size(); i++)
+        {
+			int next = v[now][i].first;
+			int nextCost = cost + v[now][i].second;
+
+			if (nextCost < dist[next])
+            {
+				dist[next] = nextCost;
+				pq.push({nextCost * -1, next});
+			}
+		}
+	}
     
-    cin >> N >> M;
- 
-    while (M--){
-        int b, c, d;
-        cin >> b >> c >> d;
-        graph[b].push_back({c,d});
-    }
-    cin >> start >> finish;
- 
-    cout << dijkstra(start) << "\n";
- 
-    return 0;
+	cout << dist[end] << "\n";
+
+	return (0);
 }
