@@ -1,35 +1,36 @@
 #include <iostream>
 #include <algorithm>
-#include <vector>
 using namespace std;
 
 int N, power;
+int tree[10000000];
 pair<int, int> player[500000];
-int tr[10000000];
 
-int seg_sum(int treeIdx, int s, int e, int l, int r)
+int sum(int idx, int start, int end, int left, int right)
 {
-    if (r < s || e < l)
+    if (right < start || end < left)
 		return (0);
-    if (l <= s && e <= r) 
-        return tr[treeIdx];
+    if (left <= start && end <= right) 
+        return tree[idx];
     else
-        return seg_sum(treeIdx * 2, s, (s + e) / 2, l, r) + 
-			   seg_sum(treeIdx * 2 + 1, (s + e) / 2 + 1, e, l, r);
+        return sum(idx * 2, start, (start + end) / 2, left, right) + 
+			   sum(idx * 2 + 1, (start + end) / 2 + 1, end, left, right);
 }
 
-void update(int treeIdx, int s, int e, int idx)
+void update(int idx, int start, int end, int findIdx)
 {
-    if (idx < s || e < idx)
+    if (findIdx < start || end < findIdx)
 		return ;
-    if (s == e)
-        tr[treeIdx] = 1;
-    else
-	{
-        update(treeIdx * 2, s, (s + e) / 2, idx);
-        update(treeIdx * 2 + 1, (s + e) / 2 + 1, e, idx);
-        tr[treeIdx] = tr[treeIdx * 2] + tr[treeIdx * 2 + 1];
+
+    if (start == end)
+    {
+        tree[idx] = 1;
+        return ;
     }
+
+    update(idx * 2, start, (start + end) / 2, findIdx);
+    update(idx * 2 + 1, (start + end) / 2 + 1, end, findIdx);
+    tree[idx] = tree[idx * 2] + tree[idx * 2 + 1];
 }
 
 bool comp(pair<int, int> p1, pair<int, int> p2)
@@ -60,7 +61,7 @@ int main()
     for (int i = 0; i < N; i++)
 	{
         int curpower = player[i].second;
-		cout << i + 1 - seg_sum(1, 1, N, 1, curpower - 1) << "\n";
+		cout << i + 1 - sum(1, 1, N, 1, curpower - 1) << "\n";
         update(1, 1, N, curpower);
     }
 }
