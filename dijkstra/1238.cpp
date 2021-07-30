@@ -1,57 +1,83 @@
 #include <iostream>
+#include <vector>
+#include <queue>
+#include <string.h>
+#include <algorithm>
 using namespace std;
-int N, M, X, x, y, z, cnt = 0, INF = 987654321, ans = -1;
-int cost[1001][1001], cost_[1001][1001], result[1001][1001], visit[1001];
 
-int findMin(int start){
-    int tmp = INF, idx = -1;
-    for(int i=1; i<=N; i++){
-        if(!visit[i] && result[cnt][i] < tmp){ // 안가보고 작은값
-            tmp = result[cnt][i];
-            idx = i;
-        }
-    }
-    visit[idx] = 1;
-    return idx;
+int N, M, X;
+int dist[1001];
+priority_queue<pair<int, int> > pq;
+vector<pair<int, int> > v[1001];
+
+void dijkstra(int start)
+{
+	memset(dist, 0, sizeof(dist));
+
+	for (int i = 1; i <= N; i++)
+		dist[i] = 987654321;
+
+	dist[start] = 0;
+	pq.push({dist[start], start});
+	while (!pq.empty())
+	{
+		int cost = pq.top().first * -1;
+		int now = pq.top().second;
+		pq.pop();
+
+		if (dist[now] < cost)
+			continue ;
+		
+		for (int i = 0; i < v[now].size(); i++)
+		{
+			int next = v[now][i].first;
+			int nextCost = cost + v[now][i].second;
+			
+			if (dist[next] > nextCost)
+			{
+				dist[next] = nextCost;
+				pq.push({dist[next] * -1, next});
+			}
+		}
+	}
 }
 
-void dijkstra(int start){
-    for(int i = 1; i<= N; i++){
-        if(i != start)
-            result[cnt][i] = INF;
-        else
-            result[cnt][start] = 0;
-        visit[i] = 0;
-    }
-    for(int i=1; i<=N; i++){
-        int t = findMin(start);
-        for(int j=1; j<=N; j++){
-            if(!cnt){
-                if(cost[t][j] != 0 && result[cnt][t] + cost[t][j] < result[cnt][j])
-                    result[cnt][j] = result[cnt][t] + cost[t][j];
-            }
-            else if(cnt){
-                if(cost_[t][j] != 0 && result[cnt][t] + cost_[t][j] < result[cnt][j])
-                    result[cnt][j] = result[cnt][t] + cost_[t][j];
-            }
-        }
-    }
-    cnt++;
-}
+int main()
+{
+	ios::sync_with_stdio(0);
+	cin.tie(0); cout.tie(0);
 
-int main(){
-    cin >> N >> M >> X;
-    for(int i=1; i<=M; i++){
-        cin >> x >> y >> z;
-        cost[x][y] = z;
-        cost_[y][x] = z;
-    }
-    dijkstra(X); // result[0][1~N] 파티장에서 집 갈때
-    dijkstra(X); // 뒤집은 배열로 각 노드에서 파티장 올때
-    
-    for(int i=1; i<=N; i++)
-        if(result[0][i] + result[1][i] > ans)
-            ans = result[0][i] + result[1][i];
-    cout << ans;
-    return 0;
+	cin >> N >> M >> X;
+	int cost[1001];
+	
+	for (int i = 0; i < M; i++)
+	{
+		int A, B, C;
+		cin >> A >> B >> C;
+		v[A].push_back({B, C});
+	}
+
+	for (int i = 1; i <= N; i++)
+	{
+		if (i == X)
+			continue ;
+		dijkstra(i);
+		cost[i] = dist[X];
+		
+	}
+	dijkstra(X);
+	for (int i = 1; i <= N; i++)
+		cost[i] += dist[i];
+
+	int ans = -1;
+	for (int i = 1; i <= N; i++)
+	{
+		if (i == X)
+			continue;
+		if (ans < cost[i])
+			ans = cost[i];
+	}
+	cout << ans << "\n";
+
+	return (0);
 }
