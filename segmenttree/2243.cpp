@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-long long tree[4000001];
+long long tree[4000004];
  
 void update(int idx, int start, int end, int findIdx, int changeValue)
 {
@@ -47,8 +47,8 @@ int main()
             int B;
             cin >> B;
             long long ans = sum(1, 1, 1000000, B);
-            cout << ans << "\n";
             update(1, 1, 1000000, ans, -1);
+            cout << ans << "\n";
         }
         else
         {
