@@ -6,8 +6,7 @@ int map[16][16];
 
 int positionCheck(int x, int y)
 {
-    int i;
-    int j;
+    int i, j;
 
     i = x;
     j = y;
@@ -36,6 +35,7 @@ void dfs(int idx)
         ans++;
         return ;
     }
+
     for (int i = 0; i < N; i++)
     {
         if (positionCheck(idx, i))
@@ -53,7 +53,10 @@ int main()
     cin.tie(0); cout.tie(0);
 
     cin >> N;
+
     dfs(0);
-    cout << ans;
+
+    cout << ans << "\n";
+    
     return (0);
 }
